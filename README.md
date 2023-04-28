@@ -41,4 +41,4 @@ Passo a passo para iniciar o projeto:
   - dificuldades conhecidas
   - como utilizar o sistema
   - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-- O prazo de entrega é até às 12h do dia 02/05/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UFU/sprint-2-pb-aws-ufu](https://github.com/Compass-pb-aws-2023-UFU/sprint-2-pb-aws-ufu)).
+- O prazo de entrega é até às 12h do dia 08/05/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UFU/sprint-2-pb-aws-ufu](https://github.com/Compass-pb-aws-2023-UFU/sprint-2-pb-aws-ufu)).
