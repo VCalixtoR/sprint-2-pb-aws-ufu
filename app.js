@@ -10,12 +10,16 @@ const Op         = Sequelize.Op;
 var giphy = require('giphy-api')('3rE2j7mlap2LyDvbcqXY3yywtdNwhPBk');
 
 const PORT = 3000; // constante
+let link;
 
+//printando link do gif aleatorio
+//TODO: mudar o html com o link gerado pela funcao giphy.random
 giphy.random(function (err, res) {
   if (err) {
     console.log(err);
   } else {
-    console.log(res.data.url);
+    link=res.data.images.original.url;
+    console.log(link);
   }
 });
 
