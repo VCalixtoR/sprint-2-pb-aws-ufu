@@ -7,8 +7,21 @@ const bodyParser    = require('body-parser');
 const Job = require('./models/job');
 const Sequelize  = require('sequelize');
 const Op         = Sequelize.Op;
+var giphy = require('giphy-api')('3rE2j7mlap2LyDvbcqXY3yywtdNwhPBk');
 
 const PORT = 3000; // constante
+
+giphy.random(function (err, res) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(res.data.url);
+  }
+});
+
+app.get('/gifs',(req,res)=>{
+  console.log(res);
+});
 
 app.listen(PORT, function() {
     console.log(`listening on port ${PORT}`);
