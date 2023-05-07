@@ -1,29 +1,16 @@
 {
-  "name": "job_finder",
+  "name": "aaa",
   "version": "1.0.0",
-  "description": "Plataforma para programadores encontrarem vagas de trabalho.",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "dev",
-    "jobs",
-    "dev",
-    "opportunity"
-  ],
-  "author": "Rafael Henrique Guimarães",
-  "license": "MIT",
+  "author": "Gabriel Couto de Freitas <gabrielcouto1@ufu.br || gabriel.freitas.pb@compasso.com.br>",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "giphy-api": "^2.0.2",
-    "jsdom": "^22.0.0",
-    "sequelize": "^6.31.1",
-    "sqlite3": "^5.1.6"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
+    "hbs": "^4.2.0"
   }
 }
