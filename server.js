@@ -10,7 +10,7 @@ app.engine('hbs', hbs1.engine({
     extname: 'hbs',
     defaultLayout: 'main',
     layoutsDir: __dirname + '/views/layouts/'
-  }));
+}));
 
 app.set('views', path.join(__dirname,'views'));
 app.set('view engine', 'hbs');
@@ -18,8 +18,9 @@ app.use(express.static('public'));
 
 app.get('/', (req,res)=>{
     let queryString = req.query.term;
+    let limit       = req.query.limit || 10;
     let term        = encodeURIComponent(queryString);
-    let url         = `http://api.giphy.com/v1/gifs/search?q=${term}&api_key=${api_key}`
+    let url         = `http://api.giphy.com/v1/gifs/search?q=${term}&api_key=${api_key}&limit=${limit}&rating=pg-13`
 
     http.get(url,(response)=>{
         response.setEncoding('utf-8');
