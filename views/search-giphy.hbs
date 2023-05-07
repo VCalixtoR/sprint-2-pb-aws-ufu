@@ -9,13 +9,41 @@
     <option value="5">5</option>
     <option value="10" selected>10</option>
     <option value="15">15</option>
-    </select>
+  </select>
   <br>
   <button type="submit">Search</button>
 </form>
 
-{{#each gifs}}
-  <a href="{{this.images.fixed_height.url}}">
-    <img src="{{this.images.fixed_height.url}}" alt="">
-  </a>
+<div class="gifs-container">
+  {{#each gifs}}
+  <div class="gif-container">
+    <a href="{{this.images.fixed_height.url}}">
+      <img src="{{this.images.fixed_height.url}}" alt="{{this.title}}">
+    </a>
+    <p class="gif-title">{{this.title}}</p>
+    <p class="gif-username">{{this.username}}</p>
+  </div>
 {{/each}}
+</div>
+
+<style>
+  .gifs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gif {
+    flex-basis: calc(33.33% - 20px);
+    margin: 60px;
+  }
+  .gif-container {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.gif-title, .gif-username {
+  font-size: 12px;
+  margin: 5px 0;
+}
+</style>
