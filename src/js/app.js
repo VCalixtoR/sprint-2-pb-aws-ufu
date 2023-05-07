@@ -3,6 +3,7 @@ const app = express();
 const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
+const Handlebars = require('handlebars');
 const Constants = require('./constants')
 
 // body parser and express
@@ -19,8 +20,7 @@ app.set('views', Constants.VIEWS_PATH);
 app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-//helpers
-const Handlebars = require('handlebars');
+// set handlebar limit helper
 Handlebars.registerHelper('limit', function(arr, limit) {
   if (!Array.isArray(arr)) { return []; }
   return arr.slice(0, limit);

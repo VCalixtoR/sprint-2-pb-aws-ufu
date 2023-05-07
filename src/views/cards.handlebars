@@ -15,36 +15,36 @@
     <div class="row">
       <div class="col-md-12">
         {{#if search}}
-        <h2 id="job-list-title">Cartão {{search.card_id}}</h2>
+          <h2 id="job-list-title">Cartão {{search.card_id}}</h2>
         {{else if category}}
-        <h2 id="job-list-title">Cartões disponíveis</h2>
+          <h2 id="job-list-title">Cartões disponíveis</h2>
         {{else}}
-        <h2 id="job-list-title">Digite um código válido</h2>
+          <h2 id="job-list-title">Digite um código válido</h2>
         {{/if}}
+        <!-- search card by id -->
         <ul id="job-list" class="list-group">
           {{#if data}}
-          <li class="list-group-item new-job">
-            <img src="{{data.card.cover}}" alt="Cover">
-            {{!-- <p>{{dataValues.company}}</p> --}}
-            <h2>{{data.card.name}}</h2>
-            <p>Preço: ${{data.card.price}}</p>
-            <p>Tamanho: {{data.card.details_size}}</p>
-            <p>Autor: {{data.card.details_author}}</p>
-          </li>
+            <li class="list-group-item new-job">
+              <img src="{{data.card.cover}}" alt="Cover">
+              <h2>{{data.card.name}}</h2>
+              <p>Preço: ${{data.card.price}}</p>
+              <p>Tamanho: {{data.card.details_size}}</p>
+              <p>Autor: {{data.card.details_author}}</p>
+            </li>
           {{/if}}
         </ul>
-        
+        <!-- search the first four cards by category -->
         <ul id="job-list" class="list-group">
           {{#if category}}
             {{#each (limit category.cards 4)}}
-            <li class="list-group-item new-job">
-            <img src="{{this.cover}}" alt="Cover">
-            <h2>{{this.name}}</h2>
-            <p>Preço: ${{this.price}}</p>
-            <p>ID cartão: {{this.id}}</p>
-            <p>Tamanho: {{this.details_size}}</p>
-            <p>Autor: {{this.details_author}}</p>
-            </li>
+              <li class="list-group-item new-job">
+              <img src="{{this.cover}}" alt="Cover">
+              <h2>{{this.name}}</h2>
+              <p>Preço: ${{this.price}}</p>
+              <p>ID cartão: {{this.id}}</p>
+              <p>Tamanho: {{this.details_size}}</p>
+              <p>Autor: {{this.details_author}}</p>
+              </li>
             {{/each}}
           {{/if}}
         </ul>
