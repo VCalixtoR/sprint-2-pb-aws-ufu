@@ -29,9 +29,10 @@ Handlebars.registerHelper('limit', function(arr, limit) {
 // default static folder - used in html rendering
 app.use(express.static(Constants.STATIC_PATH));
 
-// listening port
-app.listen(Constants.PORT, function(){
-  console.log(`Working in: http://localhost:${Constants.PORT}/`);
+// listening port, for production uses environment, for dev uses Constants.PORT
+let port = process.env.PORT ? process.env.PORT: Constants.PORT;
+app.listen(port, function(){
+  console.log(`Working in: http://localhost:${port}/`);
 });
 
 // routes
