@@ -3,7 +3,10 @@
  <input type="text" name="term">
  <button type="submit">Search</button>
 </form>
-{{!-- we use a fixed_height version so all the gifs are the same height --}}
+
 {{#each gifs}}
-<img src="{{this.images.fixed_height.url}}" alt="">
+<a href="{{this.images.fixed_height.url}}">
+    <img src="{{this.images.fixed_height.url}}" alt="">
+</a>
+
 {{/each}}
