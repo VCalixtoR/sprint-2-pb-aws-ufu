@@ -1,13 +1,15 @@
-/* Root font style */
+/* Definições gerais do projeto */
 * {
-    font-family: 'Lato', Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     color: #333447;
     line-height: 1.5;
-   }
-   h1 {
+}
+
+h1 {
     text-align: center;
-   }
-   input {
+}
+
+input {
     padding: .5em .6em;
     display: inline-block;
     border: 1px solid #ccc;
@@ -15,11 +17,13 @@
     vertical-align: middle;
     box-sizing: border-box;
     width: 300px;
-   }
-   form {
+}
+
+form {
     margin-bottom: 10px;
-   }
-   button {
+}
+
+button {
     height: 31px;
     width: 110px;
     text-align: center;
@@ -34,4 +38,48 @@
     transition: all 0.3s ease;
     outline: none;
     color: #FE7880;
-   }
+}
+
+/*Pesquisa de gifs*/
+.voltar{
+    text-align: justify;
+}
+
+.gifs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gif {
+    flex-basis: calc(33.33% - 20px);
+    margin: 60px;
+}
+
+.gif-container {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.gif-title, .gif-username {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/*Gifs aleatórios*/
+.gif-container-random {
+    text-align: center;
+    margin: 10px;
+}
+.gif-title, .gif-username {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/*Página inicial*/
+#btn-initial{
+    align-items: center;
+    background-color: black;
+    margin: 150px;
+}
