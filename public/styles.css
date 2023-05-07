@@ -74,3 +74,20 @@ button {
 }
 
 /*Página inicial*/
+#btn-initial{
+    align-items: center;
+    background-color: black;
+    margin: 150px;
+}
+
+#voltar-btn{
+    color: #FFF;
+    background-color: #F03E3E;
+    border: 1px solid transparent;
+}
+
+#voltar-btn:hover{
+    background-color: #FFF;
+    color: #F03E3E;
+    border-color: #F03E3E;
+}
