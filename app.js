@@ -36,22 +36,24 @@ app.get('/', (req,res)=>{
     });
 });
 
-// app.get('/', (req,res)=>{
-//     let url = `http://api.giphy.com/v1/gifs/random?api_key=${api_key}`
+app.get('/random', (req,res)=>{
+    let url = `http://api.giphy.com/v1/gifs/random?api_key=${api_key}`
 
-//     http.get(url,(response)=>{
-//         response.setEncoding('utf-8');
-//         let body='';
+    http.get(url,(response)=>{
+        response.setEncoding('utf-8');
+        let body='';
 
-//         response.on('data', (d)=>{
-//             body+=d;
-//         });
-//         response.on('end',()=>{
-//             let parsed = JSON.parse(body);
-//             res.render('search-giphy', {gifs: parsed.data})
-//         });
-//     });
-// });
+        response.on('data', (d)=>{
+            body+=d;
+        });
+        response.on('end',()=>{
+            let parsed = JSON.parse(body);
+            let gifData = parsed.data;
+            res.render('random-gif', {gif: gifData})
+        });
+    });
+});
+
 
 app.listen(port, ()=>{
     console.log("Listening na porta "+port);
