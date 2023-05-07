@@ -1,18 +1,19 @@
-## Integrantes
-• Carlos Livius da Silva
-• Fabio Romero de Souza Junior
-• Guilherme Rimoldi Kameoka
-• Paulo Eduardo Ferreira da Silva
-
 ## API do Google Cloud Vision
 Este é um código em JavaScript que utiliza a API Cloud Vision da Google para fazer a detecção de texto em uma imagem. Ele é executado em um servidor NodeJS, utilizando o framework Express.
+
+## Integrantes
+- Carlos Livius da Silva
+- Fabio Romero de Souza Junior
+- Guilherme Rimoldi Kameoka
+- Paulo Eduardo Ferreira da Silva
 
 ## Instalação
 Para utilizar este código, é necessário instalar o Node.js (https://nodejs.org) e os seguintes pacotes:
 
-• express: npm install express
-• multer: npm install multer
-• @google-cloud/vision: npm install @google-cloud/vision
+- express: npm install express
+- multer: npm install multer
+- @google-cloud/vision: npm install @google-cloud/vision
+
 Também é necessário criar um arquivo credential.json com as suas credenciais do Google Cloud Vision. Para mais informações sobre como criar este arquivo, consulte a documentação da API do Google Cloud Vision (https://cloud.google.com/vision/docs/before-you-begin?hl=pt-br)
 
 ## Utilização
