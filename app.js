@@ -2,7 +2,7 @@ const path    = require('path');
 const express = require('express');
 const hbs1    = require('express-handlebars');
 const app     = express();
-const port    = 3000;
+const port    = 3001;
 const routes  = require('./routes/routes.js');
 
 app.engine('hbs', hbs1.engine({

@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Gif aleatório</title>
-  <a id="voltar" href="/">
-    <button >Voltar para a página inicial</button>
-  </a>
-</head>
-<body>
-  <div class="container">
-    <h1>Random GIF</h1>
-    <button id="new-gif-button" onclick="location.href='/random'">New GIF</button>
-    <div class="gif-container-random">
-      <a href="{{gif.images.original.url}}">
-        <img src="{{gif.images.fixed_height.url}}" alt="{{gif.title}}">
-      </a>
-      <p class="gif-title">Nome do gif: {{gif.title}}</p>
-      <p class="gif-username">Autor: {{gif.username}}</p>
-    </div>
+<a id="voltar" href="/">
+  <button id="voltar-btn">Voltar</button>
+</a>
+<h1 id="titulo-principal">Gif aleatório</h1>
+<div class="container">
+  <div class="gif-container-random">
+    <a href="{{gif.images.original.url}}">
+      <img src="{{gif.images.fixed_height.url}}" alt="{{gif.title}}">
+    </a>
+    <p class="gif-title">Nome do gif: {{gif.title}}</p>
+    <p class="gif-username">Autor: {{gif.username}}</p>
+    <button id="new-gif-button" onclick="location.href='/random'">Gerar novo gif</button>
   </div>
-</body>
-</html>
+</div>
