@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif
+}
+  
+html {
+  background-color: #212529;
+}
+
+/* responsivity */
+@media (max-width: 481px) {
+}
