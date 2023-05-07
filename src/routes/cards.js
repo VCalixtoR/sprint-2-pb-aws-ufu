@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Constants = require('./../js/constants');
 
+// needed because older versions of node does not have fetch as a default method
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 // fetches a request with exception handling
 async function baseRequestHandling(options, base_url, endpoint){
 
