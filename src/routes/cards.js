@@ -52,4 +52,21 @@ router.post('/', async (req, res) => {
   }
 });
 
+// get cards from a category given its id
+router.get('/', async (req, res) => {
+  const search_category = req.query;
+
+  let category = await baseRequestHandling({
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json'
+    }}, BASE_HANDWRYTTEN_URL, `v1/cards/list?category_id=${search_category.category_id}`);
+  
+  if(category){
+    res.render('cards', { category, search_category });
+  } else {
+    res.render('cards', {});
+  }
+});
+
 module.exports = router;
