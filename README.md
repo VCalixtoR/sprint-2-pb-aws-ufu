@@ -1,33 +1,19 @@
 # **Avaliação Sprint 2 - Programa de Bolsas Compass UOL / AWS e UFU**
 
-<br>
-
 Avaliação da segunda sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
-<br>
-
 ## **Membros da equipe**
-
-<br>
 
 - Igor Blanco Toneti
 - Paulo Diego da Silva Souza
 - Pedro Henrique Resende Ribeiro
 - Vinicius Calixto Rocha
 
-<br>
-
 ## **Sobre o repositório**
-
-<br>
 
 Este repositório possui uma solução para a segunda avaliação do curso machine learning para AWS da Compass UOL. O objetivo é a implementação de um sistema que funciona como intermediário de uma API pública. A API escolhida para o projeto foi a [HandWrytten](https://any-api.com/handwrytten_com/handwrytten_com/docs/API_Description). Foram abordadas as tecnologias Node.js, Express, Handlebars, dentre outras. Além disso, foram adotadas boas práticas e padrões de projetos web para a execução da atividade.
 
-<br>
-
 ## **Início rápido**
-
-<br>
 
 Para executar o código localmente:
 
@@ -37,17 +23,9 @@ Para executar o código localmente:
 3. Execute o projeto node utilizando o comando `npm run dev`
 4. Abra `http://localhost:8000/` que será exibido no terminal
 
-<br>
-
-```
-Obs: Verifique se a versão do node instalada é igual ou superior a v18.16.0. Lembre-se de configurar as variáveis de ambiente.
-```
-
-<br>
+>**Obs:** Verifique se a versão do node instalada é igual ou superior a v18.16.0. Lembre-se de configurar as variáveis de ambiente.
 
 ## **Funcionamento**
-
-<br>
 
 Ao carregar a página, será exibida a home da aplicação, contendo uma barra de pesquisa na qual pode-se digitar o ID do cartão que deseja-se procurar. Exemplos de ID's válidos para pesquisa são 87 (Holiday Cheer), 21657 (Love is Love), 72 (Simple Bonjour), dentre outros.
 
@@ -59,17 +37,9 @@ No topo da página há uma navbar contendo as seguintes opções: Home, Anivers�
 - Namorados: mostra 4 cartões com o tema do dia dos namorados
 - Motivacional: mostra 4 cartões com o tema motivacional
 
-<br>
-
-```
-Obs: Optou-se por mostrar apenas 4 cartões ao selecionar as opções da navbar, pois o retorno da API é um JSON contendo mais de 100 itens para as categorias.
-```
-
-<br>
+>**Obs:** Optou-se por mostrar apenas 4 cartões ao selecionar as opções da navbar, pois o retorno da API é um JSON contendo mais de 100 itens para as categorias.
 
 ## **Desenvolvimento da atividade**
-
-<br>
 
 Inicialmente o repositório da sprint foi clonado e uma nova branch foi criada com o nome `equipe-2`. Após a etapa anterior, foi definido o template de pastas utilizando [html5 boilerplate](https://github.com/h5bp/html5-boilerplate/). Em seguida, iniciou-se a construção do código da aplicação. Foi adotado o seguinte passo-a-passo:
 
@@ -79,11 +49,7 @@ Inicialmente o repositório da sprint foi clonado e uma nova branch foi criada c
 - Refatoração do código para criar um módulo de constantes e corrigir identação do código
 - Modificação do readme e do changelog do projeto
 
-<br>
-
 ## **Dificuldades**
-
-<br>
 
 Não houveram dificuldades que impediram o desenvolvimento do projeto, porém duas ocorrências devem ser destacadas:
 
