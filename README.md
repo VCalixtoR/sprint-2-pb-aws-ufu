@@ -1,44 +1,28 @@
-# Avaliação Sprint 2 - Programa de Bolsas Compass UOL / AWS e UFU
+## Integrantes
+• Carlos Livius da Silva
+• Fabio Romero de Souza Junior
+• Guilherme Rimoldi Kameoka
+• Paulo Eduardo Ferreira da Silva
 
-Avaliação da segunda sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
+## API do Google Cloud Vision
+Este é um código em JavaScript que utiliza a API do Google Cloud Vision para fazer a detecção de rótulos (categorias) e de texto em uma imagem. Ele é executado em um servidor NodeJS, utilizando o framework Express.
 
-***
+## Instalação
+Para utilizar este código, é necessário instalar o Node.js e os seguintes pacotes:
 
-## Execução (Código Fonte)
+• express: npm install express
+• multer: npm install multer
+• @google-cloud/vision: npm install @google-cloud/vision
+Também é necessário criar um arquivo credential.json com as suas credenciais do Google Cloud Vision. Para mais informações sobre como criar este arquivo, consulte a documentação da API do Google Cloud Vision.
 
-Faça um sistema em JavaScript/NodeJS que produza uma interface para consulta de uma API pública.
+## Utilização
+Para utilizar o código, basta executá-lo em um servidor Node.js com o comando "node index.js".
+O código será executado na porta 3000, ou na porta definida pela variável de ambiente PORT.
+Para fazer uma requisição para a API, envie uma imagem via POST para a URL /vision, com o campo image contendo a imagem. O servidor irá retornar um objeto JSON contendo o texto encontrado na imagem.
 
-**Especificações**:
+## Funcionamento
+O código utiliza o pacote Multer para fazer o upload da imagem. Em seguida, ele utiliza a API do Google Cloud Vision para fazer a detecção de rótulos e de texto na imagem. O texto encontrado é retornado como resposta para a requisição.
+O código utiliza a função ExecutaAPIgoogleVision para fazer a chamada para a API do Google Cloud Vision. Esta função recebe o Buffer da imagem como parâmetro e retorna uma Promise que resolve com o texto encontrado na imagem.
 
-Passo a passo para iniciar o projeto:
-
-1. Escolher uma API pública (em <https://any-api.com/>, ou qualquer outra, e **deve ser diferente das demais equipes**);
-2. Consumir essa API utilizando NodeJS;
-3. Criar uma página html para fazer consultas pela API (pode ser bem simples, o layout não será avaliado).
-
-***
-
-## O que será avaliado?
-
-- Em JavaScript/NodeJS, conforme proposta
-- Seguir as atividades na ordem proposta
-- Organização geral do código fonte
-  - Estrutura de pastas
-  - Estrutura da logica de negócio
-  - Otimização do código fonte (evitar duplicações de código)
-- Objetividade do README.md
-
-***
-
-## Entrega
-
-- Aceitar o convite do repositório da sprint-2-pb-aws-ufu
-- **O trabalho deve ser feito em grupos de três ou quatro pessoas**
-- Criar uma branch no repositório com o formato equipe-número (Exemplo: equipe-1)
-- Conferir se a API desejada já não foi escolhida por outra equipe
-- Subir o trabalho na branch com um [Readme.md](README.md)
-  - documentar detalhes sobre como a avaliação foi desenvolvida
-  - dificuldades conhecidas
-  - como utilizar o sistema
-  - 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-- O prazo de entrega é até às 12h do dia 08/05/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-UFU/sprint-2-pb-aws-ufu](https://github.com/Compass-pb-aws-2023-UFU/sprint-2-pb-aws-ufu)).
+## Dificuldades encontradas
+Durante a execução do projeto, enfrentamos algumas dificuldades em relação ao tempo disponível, especialmente em relação ao desenvolvimento do código para consumir a API e em fazer a conexão entre o backend e o frontend da aplicação. Essas dificuldades acabaram impactando o progresso do projeto e exigiram mais esforços para serem superadas.
