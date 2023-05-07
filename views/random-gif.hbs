@@ -1,14 +1,33 @@
-<a id="voltar" href="/">
-  <button id="voltar-btn">Voltar</button>
-</a>
-<h1 id="titulo-principal">Gif aleatório</h1>
-<div class="container">
-  <div class="gif-container-random">
-    <a href="{{gif.images.original.url}}">
-      <img src="{{gif.images.fixed_height.url}}" alt="{{gif.title}}">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GIF Aleatório</title>
+
+    <!-- Adicione o link para o BootstrapCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    
+    <!-- Adicione o estilo personalizado -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <a id="voltar" href="/">
+      <button id="voltar-btn">Voltar</button>
     </a>
-    <p class="gif-title">Nome do gif: {{gif.title}}</p>
-    <p class="gif-username">Autor: {{gif.username}}</p>
-    <button id="new-gif-button" onclick="location.href='/random'">Gerar novo gif</button>
-  </div>
-</div>
+    <h1 id="titulo-principal">GIF Aleatório</h1>
+    <div class="container">
+      <div class="gif-container-random">
+        <a href="{{gif.images.original.url}}">
+          <img src="{{gif.images.fixed_height.url}}" alt="{{gif.title}}">
+        </a>
+        <p class="gif-title">Nome do gif: {{gif.title}}</p>
+        <p class="gif-username">Autor: {{gif.username}}</p>
+        <button id="new-gif-button" class="btn-new-gif" onclick="location.href='/random'">Gerar novo gif</button>
+      </div>
+    </div>
+
+    <!-- Adicione o script do BootstrapCDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -91,3 +91,134 @@ button {
     color: #F03E3E;
     border-color: #F03E3E;
 }
+
+/**/
+#btn-initial{
+    align-items: center;
+    background-color: black;
+    margin: 150px;
+}
+
+#voltar-btn{
+    color: #FFF;
+    background-color: #F03E3E;
+    border: 1px solid transparent;
+}
+
+#voltar-btn:hover{
+    background-color: #FFF;
+    color: #F03E3E;
+    border-color: #F03E3E;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+#titulo-principal {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: #dc3545;
+    font-weight: 700;
+}
+.gif-container-random {
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.gif-container-random img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.gif-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+}
+.gif-username {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+#new-gif-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#new-gif-button:hover {
+    background-color: #0069d9;
+}
+
+/* search page*/
+body {
+    margin: 0;
+  }
+  
+  #voltar-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  form {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  form label {
+    margin-right: 10px;
+  }
+  
+  select {
+    margin-right: 10px;
+  }
+  
+  #pesquisar-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  
+  .gifs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .gif-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gif-title,
+  .gif-username {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .gif-title {
+    font-weight: bold;
+  }
+  
+  .gifs-container {
+    text-align: center;
+  }
