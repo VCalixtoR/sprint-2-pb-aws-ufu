@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-const BASE_HANDWRYTTEN_URL = 'https://api.handwrytten.com/';
+const Constants = require('./../js/constants');
 
 // fetches a request with exception handling
 async function baseRequestHandling(options, base_url, endpoint){
@@ -43,7 +42,7 @@ router.post('/', async (req, res) => {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
-    }}, BASE_HANDWRYTTEN_URL, 'v1/cards/view'); 
+    }}, Constants.BASE_HANDWRYTTEN_URL, 'v1/cards/view'); 
   
   if(data){
     res.render('cards', { data, search });
@@ -60,7 +59,7 @@ router.get('/', async (req, res) => {
     method: 'GET',
     headers: {
       'Accept': 'application/json'
-    }}, BASE_HANDWRYTTEN_URL, `v1/cards/list?category_id=${search_category.category_id}`);
+    }}, Constants.BASE_HANDWRYTTEN_URL, `v1/cards/list?category_id=${search_category.category_id}`);
   
   if(category){
     res.render('cards', { category, search_category });

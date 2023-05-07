@@ -3,12 +3,7 @@ const app = express();
 const exphbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
-
-const PORT = 8000;
-const PROJECT_PATH = process.cwd();
-const VIEWS_PATH = path.join(PROJECT_PATH, 'src', 'views');
-const STATIC_PATH = path.join(PROJECT_PATH, 'src', 'public');
-const ROUTES_PATH = path.join(PROJECT_PATH, 'src', 'routes');
+const Constants = require('./constants')
 
 // body parser and express
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,7 +15,7 @@ app.get('/', function(req, res){
 });
 
 // handle bars
-app.set('views', VIEWS_PATH);
+app.set('views', Constants.VIEWS_PATH);
 app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
@@ -32,12 +27,12 @@ Handlebars.registerHelper('limit', function(arr, limit) {
 });
 
 // default static folder - used in html rendering
-app.use(express.static(STATIC_PATH));
+app.use(express.static(Constants.STATIC_PATH));
 
 // listening port
-app.listen(PORT, function(){
-  console.log(`Working in: http://localhost:${PORT}/`);
+app.listen(Constants.PORT, function(){
+  console.log(`Working in: http://localhost:${Constants.PORT}/`);
 });
 
 // routes
-app.use('/card', require(path.join(ROUTES_PATH, 'cards.js')));
+app.use('/card', require(path.join(Constants.ROUTES_PATH, 'cards.js')));
