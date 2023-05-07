@@ -32,4 +32,24 @@ async function baseRequestHandling(options, base_url, endpoint){
   }
 }
 
+// post to render a card with a given id
+router.post('/', async (req, res) => {
+
+  const search = req.body;
+
+  let data = await baseRequestHandling({
+    method: 'POST',
+    body: JSON.stringify(search), 
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }}, BASE_HANDWRYTTEN_URL, 'v1/cards/view'); 
+  
+  if(data){
+    res.render('cards', { data, search });
+  } else {
+    res.render('cards', {});
+  }
+});
+
 module.exports = router;
